@@ -185,12 +185,12 @@ def buildTool(tool, archTriplet, arch, args):
 
 def installQemuPlugin (tool, args):
     print("Install CxRAM qemu plugin from it' repository")
-#     buildDir = "%s/tmp/build/%s/%s/"%(args.workingdir, tool, tool)
-#     cmd (["mkdir", "-p", buildDir], True,   doExec = args.donot)
+    buildDir = "%s/tmp/build/%s/%s/"%(args.workingdir, tool, tool)
+    cmd (["mkdir", "-p", buildDir], True,   doExec = args.donot)
 #     cmd (["tar", "xf", "%s/tgz/csram-qemu-plugin-V1.4.tgz"%args.workingdir], True, buildDir,  doExec = args.donot)
-# #    cmd (['git' ,'clone', 'git@git-dscin.intra.cea.fr:hybrogen/csram-qemu-plugin.git'], True,  wdir = buildDir)
-#     installDir = '%s/libexec/qemu/'%args.prefix
-#     cmd (['make', 'getQemuSrc', 'all', 'install', 'QEMUINSTALLDIR=%s'%installDir], True, buildDir)
+    cmd (['git' ,'clone', 'git@git-dscin.intra.cea.fr:hybrogen/csram-qemu-plugin.git'], True,  wdir = buildDir)
+    installDir = '%s/libexec/qemu/'%args.prefix
+    cmd (['make', 'getQemuSrc', 'all', 'install', 'QEMUINSTALLDIR=%s'%installDir], True, buildDir)
 
 def installTool(tool, archTriplet, arch, args):
     """Install tools"""
