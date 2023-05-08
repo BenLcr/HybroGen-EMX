@@ -311,7 +311,7 @@ class H2CxRAMRewrite():
             elif semName == "SR":
                 semName = "SRLI"
             elif semName == "MUL":
-                semName = "MULLO"
+                semName = "MUL"
 
         if src2 is not None:
             format_ = "aaa"
